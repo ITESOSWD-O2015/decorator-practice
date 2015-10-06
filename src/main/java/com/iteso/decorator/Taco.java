@@ -11,12 +11,14 @@ public abstract class Taco {
     public String description = "Any Taco";
     public boolean seaMeat = false;
     public boolean miniSize = false;
+    public boolean isTaco = false;
 
     public String getDescription(){
         return description;
     }
     public boolean getSeaMeat() { return seaMeat;}
     public boolean getMiniSize() { return miniSize;}
+    public boolean getIsTaco() { return isTaco;}
     public abstract double cost();
 
 

@@ -17,4 +17,5 @@ public class TacoNormal extends Taco {
     public double cost() {
         return 8.00;  //To change body of implemented methods use File | Settings | File Templates.
     }
+    public boolean getIsTaco() { return true;}
 }

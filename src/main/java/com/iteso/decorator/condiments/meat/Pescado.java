@@ -14,11 +14,10 @@ public class Pescado extends CondimentsDecorator {
     Taco taco;
 
     public Pescado(Taco taco){
-        if(!taco.getMiniSize())
+        if(!taco.getMiniSize() || taco.getIsTaco())
             this.taco = taco;
-
         else
-            System.out.print("You can't make a mini fish or shrimp taco");
+            System.out.print("Wrong type of taco or neat");
     }
 
     public boolean getSeaMeat(){

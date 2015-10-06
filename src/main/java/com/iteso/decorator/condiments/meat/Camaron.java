@@ -13,17 +13,12 @@ import com.iteso.decorator.Taco;
 public class Camaron extends CondimentsDecorator {
     Taco taco;
 
-    public boolean getSeaMeat(){
-        return true;
-    }
-
+    public boolean getSeaMeat(){ return true; }
     public Camaron(Taco taco){
-
-        if(!taco.getMiniSize())
+        if(!taco.getMiniSize() || taco.getIsTaco())
             this.taco = taco;
-
         else
-            System.out.print("You can't make a mini fish or shrimp taco");
+            System.out.print("Wrong type of taco or neat");
     }
 
     @Override

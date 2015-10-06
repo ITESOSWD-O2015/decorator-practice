@@ -26,4 +26,9 @@ public class Bistec extends CondimentsDecorator{
     public double cost() {
         return 0 + taco.cost();
     }
+
+    @Override
+    public Size getSize() {
+        return this.taco.getSize();
+    }
 }

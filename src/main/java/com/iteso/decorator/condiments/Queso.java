@@ -26,4 +26,9 @@ public class Queso extends CondimentsDecorator {
     public double cost() {
         return 2.00 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
     }
+
+    @Override
+    public Size getSize() {
+        return this.taco.getSize();
+    }
 }

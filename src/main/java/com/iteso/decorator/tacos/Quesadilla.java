@@ -9,12 +9,24 @@ import com.iteso.decorator.Taco;
  * To change this template use File | Settings | File Templates.
  */
 public class Quesadilla extends Taco {
-    public Quesadilla(){
-        description = "Quesadilla";
+    public Quesadilla()
+    {
+        this.description= "Quesadilla";
+
     }
 
     @Override
     public double cost() {
-        return 10.00;  //To change body of implemented methods use File | Settings | File Templates.
+        return 10.00;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.description + " " + this.size;
+    }
+
+    @Override
+    public Size getSize() {
+        return this.size;
     }
 }

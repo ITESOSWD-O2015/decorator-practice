@@ -8,11 +8,19 @@ package com.iteso.decorator;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Taco {
-    public String description = "Any Taco";
-    public String getDescription(){
-        return description;
-    }
+
+    protected String description;
+    protected Size size;
+
     public abstract double cost();
+
+    public enum Size {
+        mini, regular, mega
+    }
+
+    //getters and setters
+    public abstract String getDescription();
+    public abstract Size getSize();
 
 
 }

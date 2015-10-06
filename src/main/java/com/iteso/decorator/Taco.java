@@ -13,6 +13,4 @@ public abstract class Taco {
         return description;
     }
     public abstract double cost();
-
-
 }

@@ -5,10 +5,13 @@ import com.iteso.decorator.condiments.Cilantro;
 import com.iteso.decorator.condiments.TortillaHarina;
 import com.iteso.decorator.condiments.TortillaMaiz;
 import com.iteso.decorator.condiments.meat.Chorizo;
+import com.iteso.decorator.condiments.meat.Fish;
 import com.iteso.decorator.condiments.meat.Lengua;
 import com.iteso.decorator.condiments.meat.Pastor;
+import com.iteso.decorator.size.Mega;
 import com.iteso.decorator.tacos.Quesadilla;
 import com.iteso.decorator.tacos.TacoNormal;
+import com.iteso.decorator.tacos.Volcan;
 
 /**
  * Created with IntelliJ IDEA.
@@ -55,6 +58,25 @@ public class TuTaco {
         System.out.println(taco3.getDescription());
         System.out.println("$" + taco3.cost() + " MXN");
 
+        Taco taco4 = new Volcan();
+        taco4 = new TortillaHarina(taco4);
+        taco4 = new Pastor(taco4);
+       taco4 = new Fish(taco4);
 
+        System.out.println();
+        System.out.println();
+        System.out.println(taco4.getDescription());
+        System.out.println("$" + taco4.cost() + " MXN");
+/*
+        Taco taco5 = new TacoNormal();
+
+        taco5 = new TortillaHarina(taco5);
+        taco5 = new Mega(taco5);
+        taco5 = new Fish(taco5);
+
+        System.out.println();
+        System.out.println();
+        System.out.println(taco5.getDescription());
+        System.out.println("$" + taco5.cost() + " MXN");*/
     }
 }

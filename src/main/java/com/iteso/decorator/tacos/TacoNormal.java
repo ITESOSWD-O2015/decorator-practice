@@ -11,7 +11,7 @@ import com.iteso.decorator.Taco;
  */
 public class TacoNormal extends Taco {
     public TacoNormal(){
-        description = "Taco normal";
+        description = "Taco regular";
     }
     @Override
     public double cost() {

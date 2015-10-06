@@ -4,9 +4,9 @@ import com.iteso.decorator.condiments.Cebolla;
 import com.iteso.decorator.condiments.Cilantro;
 import com.iteso.decorator.condiments.TortillaHarina;
 import com.iteso.decorator.condiments.TortillaMaiz;
-import com.iteso.decorator.condiments.meat.Chorizo;
-import com.iteso.decorator.condiments.meat.Lengua;
-import com.iteso.decorator.condiments.meat.Pastor;
+import com.iteso.decorator.meat.Chorizo;
+import com.iteso.decorator.meat.Lengua;
+import com.iteso.decorator.meat.Pastor;
 import com.iteso.decorator.tacos.Quesadilla;
 import com.iteso.decorator.tacos.TacoNormal;
 

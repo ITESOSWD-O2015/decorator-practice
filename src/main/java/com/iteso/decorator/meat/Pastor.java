@@ -1,4 +1,4 @@
-package com.iteso.decorator.condiments.meat;
+package com.iteso.decorator.meat;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;

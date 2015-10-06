@@ -1,4 +1,4 @@
-package com.iteso.decorator.condiments.meat;
+package com.iteso.decorator.meat;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
@@ -7,23 +7,23 @@ import com.iteso.decorator.Taco;
  * Created with IntelliJ IDEA.
  * User: rvillalobos
  * Date: 8/19/13
- * Time: 4:03 PM
+ * Time: 1:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Bistec extends CondimentsDecorator{
+public class Lengua extends CondimentsDecorator {
     Taco taco;
 
-    public Bistec (Taco taco){
+    public Lengua (Taco taco){
         this.taco = taco;
     }
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de bistec";
+        return taco.getDescription() + " de lengua";
     }
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        return 2 + taco.cost();
     }
 }

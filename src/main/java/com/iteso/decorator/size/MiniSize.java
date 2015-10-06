@@ -9,29 +9,26 @@ import com.iteso.decorator.Taco;
 public class MiniSize extends SizeDecorator{
 
     Taco taco;
+    public boolean getMiniSize(){
+        return true;
+    }
+    public String errorS = "ERROR - INVALID TACO";
 
     public MiniSize(Taco taco) {
-
-        if(!taco.getSeaMeat())
-            this.taco = taco;
-
-        else
-            System.out.print("You can't make a mini fish or shrimp taco");
+        this.taco = taco;
     }
 
     @Override
     public String getDescription() {
 
-        return taco.getDescription() + " tamano mini";
+        if(taco.getSeaMeat()) return errorS;
+        else return taco.getDescription() + " tamano mini";
     }
-
-    public boolean getMiniSize(){
-        return true;
-    }
-
 
     @Override
     public double cost() {
-        return taco.cost() - 2;
+
+        if(taco.getSeaMeat()) return -1;
+        else return taco.cost() - 2;
     }
 }

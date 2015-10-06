@@ -12,12 +12,10 @@ import com.iteso.decorator.Taco;
  */
 public class Pescado extends CondimentsDecorator {
     Taco taco;
+    public String errorS = "ERROR - INVALID TACO";
 
     public Pescado(Taco taco){
-        if(!taco.getMiniSize() || taco.getIsTaco())
             this.taco = taco;
-        else
-            System.out.print("Wrong type of taco or neat");
     }
 
     public boolean getSeaMeat(){
@@ -26,11 +24,14 @@ public class Pescado extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de pescado";
+
+        if(taco.getMiniSize()) return errorS;
+        else return taco.getDescription() + " de pescado";
     }
 
     @Override
     public double cost() {
-        return 5 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
+        if(taco.getMiniSize()) return -1;
+        else return 5 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

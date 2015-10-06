@@ -15,7 +15,7 @@ public class RegularSize extends SizeDecorator{
     @Override
     public String getDescription() {
 
-        return taco.getDescription() + " tamano normal";
+        return taco.getDescription() + " tamano regular";
     }
 
     @Override

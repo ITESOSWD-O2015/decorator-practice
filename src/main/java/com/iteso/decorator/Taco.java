@@ -9,9 +9,14 @@ package com.iteso.decorator;
  */
 public abstract class Taco {
     public String description = "Any Taco";
+    public boolean seaMeat = false;
+    public boolean miniSize = false;
+
     public String getDescription(){
         return description;
     }
+    public boolean getSeaMeat() { return seaMeat;}
+    public boolean getMiniSize() { return miniSize;}
     public abstract double cost();
 
 

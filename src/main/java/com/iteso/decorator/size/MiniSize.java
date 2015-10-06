@@ -10,13 +10,25 @@ public class MiniSize extends SizeDecorator{
 
     Taco taco;
 
-    public MiniSize(Taco taco) { this.taco = taco;}
+    public MiniSize(Taco taco) {
+
+        if(!taco.getSeaMeat())
+            this.taco = taco;
+
+        else
+            System.out.print("You can't make a mini fish or shrimp taco");
+    }
 
     @Override
     public String getDescription() {
 
         return taco.getDescription() + " tamano mini";
     }
+
+    public boolean getMiniSize(){
+        return true;
+    }
+
 
     @Override
     public double cost() {

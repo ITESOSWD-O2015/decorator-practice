@@ -1,17 +1,14 @@
 package com.iteso.decorator;
 
+import com.sun.glass.ui.Size;
+
 /**
- * Created with IntelliJ IDEA.
- * User: rvillalobos
- * Date: 8/19/13
- * Time: 12:41 PM
- * To change this template use File | Settings | File Templates.
+ * Created by JoseFranco on 06/10/2015.
  */
-public abstract class Taco {
+public abstract class TacoSize  {
     public String description = "Any Taco";
     public String getDescription(){
         return description;
     }
     public abstract double cost();
-
 }

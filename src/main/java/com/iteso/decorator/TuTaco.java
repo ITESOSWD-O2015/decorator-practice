@@ -1,14 +1,8 @@
 package com.iteso.decorator;
 
-import com.iteso.decorator.condiments.Cebolla;
-import com.iteso.decorator.condiments.Cilantro;
-import com.iteso.decorator.condiments.TortillaHarina;
-import com.iteso.decorator.condiments.TortillaMaiz;
-import com.iteso.decorator.condiments.meat.Chorizo;
-import com.iteso.decorator.condiments.meat.Lengua;
-import com.iteso.decorator.condiments.meat.Pastor;
-import com.iteso.decorator.tacos.Quesadilla;
-import com.iteso.decorator.tacos.TacoNormal;
+import com.iteso.decorator.condiments.*;
+import com.iteso.decorator.condiments.meat.*;
+import com.iteso.decorator.tacos.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -54,6 +48,55 @@ public class TuTaco {
         System.out.println();
         System.out.println(taco3.getDescription());
         System.out.println("$" + taco3.cost() + " MXN");
+
+        /** changes Here I put the three new types of tacos -------------------------------**/
+
+        Taco taco4 = new Volcan();
+
+        /**  esta parte no entendi bien  que hace **/
+        taco4 = new TortillaMaiz(taco4);
+        taco4 = new Bistec(taco4);
+        taco4 = new Cebolla(taco4);
+        taco4 = new Cilantro(taco4);
+        taco4 = new Queso(taco4);
+
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println(taco4.getDescription());
+        System.out.println("$" + taco4.cost() + " MXN");
+
+
+
+        Taco taco5 = new ShripTaco();
+
+        /**  esta parte no entendi bien  que hace **/
+        taco5 = new TortillaHarina(taco5);
+        taco5 = new Shrip(taco5);
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println(taco5.getDescription());
+        System.out.println("$" + taco5.cost() + " MXN");
+
+
+        Taco taco6 = new FishTaco();
+
+        /**  esta parte no entendi bien  que hace **/
+        taco6 = new TortillaHarina(taco6);
+        taco6 = new Fish(taco6);
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println(taco6.getDescription());
+        System.out.println("$" + taco6.cost() + " MXN");
+
+
+
+
 
 
     }

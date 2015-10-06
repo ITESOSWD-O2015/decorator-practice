@@ -14,5 +14,10 @@ public abstract class Taco {
     }
     public abstract double cost();
 
+    /** Se agrega TacoSize**/
+    public String getSize = "Any Size";
+
+    /** **/
+
 
 }

@@ -7,10 +7,12 @@ import com.iteso.decorator.Taco;
  */
 public class Volcan extends Taco {
 
-    public Volcan(){
+    public Volcan(String size){
         description = "Volcan";
+        super.size=REGULAR;
     }
 
+    @Override
     public double cost(){
         return 12;
     }

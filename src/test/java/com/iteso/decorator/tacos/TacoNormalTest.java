@@ -16,7 +16,7 @@ import static org.mockito.Mockito.*;
 public class TacoNormalTest {
     @Test
     public void testCost() {
-        Taco taco = new TacoNormal();
+        Taco taco = new TacoNormal("Regular");
         assertEquals(8.0, taco.cost(),0);
     }
 }

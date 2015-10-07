@@ -10,11 +10,20 @@ import com.iteso.decorator.Taco;
  * To change this template use File | Settings | File Templates.
  */
 public class TacoNormal extends Taco {
-    public TacoNormal(){
-        description = "Taco regular";
+    public TacoNormal(String size){
+        description = "Taco regular" + size;
+        this.size=size;
     }
     @Override
     public double cost() {
-        return 8.00;  //To change body of implemented methods use File | Settings | File Templates.
+        String size = getSize();
+        Double cost = 8.0;
+        if(size.equals(MINI)){
+            cost-=1;
+        }
+        else if (size.equals(MEGA)){
+            cost+=1;
+        }
+        return cost;
     }
 }

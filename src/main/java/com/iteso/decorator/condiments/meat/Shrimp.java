@@ -11,16 +11,24 @@ public class Shrimp extends CondimentsDecorator {
 
     public Shrimp(Taco taco){
 
-        if (!(taco.getDescription().contains("mini")))
+        if(taco.getSize()=="Mini"){
+            System.out.print("Error, no puede haber tacos mini de pescado y/o camaron");
+            return;
+        }
+        else
             this.taco = taco;
 
-        System.out.print("Error, no puede haber tacos mini de pescado y/o camaron");
+
     }
 
     public String getDescription(){
-        return this.getDescription() + " de camaron";
+        return this.taco.getDescription() + " de camaron";
     }
     public double cost(){
-        return this.cost() + 5;
+        if(taco.getSize()=="Mega"){
+            return 3.00 + taco.cost();
+
+        }
+        return 2 + taco.cost();
     }
 }

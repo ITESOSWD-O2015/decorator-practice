@@ -18,11 +18,14 @@ public class Camaron extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + "de camaron";
+        if(taco.getDescription().contains("Taco mini"))
+            return taco.getDescription();
+
+        return taco.getDescription() + " de camarón";
     }
 
     @Override
     public double cost() {
-        return 2 + taco.cost();
+        return 0 + taco.cost();
     }
 }

@@ -17,11 +17,14 @@ public class Pescado extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-       return taco.getDescription() + "de pescado";
+       if(taco.getDescription().contains(" Taco mini"))
+           return taco.getDescription();
+
+       return taco.getDescription() + " de pescado";
     }
 
     @Override
     public double cost() {
-        return 2 + taco.cost();
+        return 0 + taco.cost();
     }
 }

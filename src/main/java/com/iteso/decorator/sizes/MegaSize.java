@@ -1,18 +1,24 @@
 package com.iteso.decorator.sizes;
 
-import com.iteso.decorator.TacoSize;
+import com.iteso.decorator.Taco;
 
 /**
  * Created by GGGK4 on 06/10/2015.
  */
-public class MegaSize extends TacoSize {
+public class MegaSize extends Taco {
 
-    public MegaSize(){
+    Taco taco;
 
-        description = "Mega size";
+    public MegaSize(Taco taco){
+        this.taco = taco;
+    }
+
+    @Override
+    public String getDescription(){
+        return taco.getDescription() + " Taco mega";
     }
     @Override
     public double cost() {
-        return 11.00;
+        return 0 + (taco.cost()+3);
     }
 }

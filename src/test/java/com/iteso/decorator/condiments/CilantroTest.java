@@ -3,8 +3,10 @@ package com.iteso.decorator.condiments;
 import com.iteso.decorator.Taco;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +15,7 @@ import static org.mockito.Mockito.*;
  * Time: 10:46 AM
  * To change this template use File | Settings | File Templates.
  */
-public class CebollaTest {
+public class CilantroTest {
     private Taco taco;
     @Before
     public void setUp(){
@@ -22,35 +24,35 @@ public class CebollaTest {
 
     @Test
     public void testCost(){
-        Taco cebolla = new Cebolla(taco);
+        Taco cilantro = new Cebolla(taco);
         when(taco.cost()).thenReturn(8.0);
         when(taco.getDescription()).thenReturn("Taco Normal");
-        double cost = cebolla.cost();
+        double cost = cilantro.cost();
         assertEquals(8.0, cost,0);
     }
 
     @Test
     public void testDescription(){
-        Taco cebolla = new Cebolla(taco);
+        Taco cilantro = new Cilantro(taco);
         when(taco.getDescription()).thenReturn("Taco Normal");
-        String desc = cebolla.getDescription();
-        assertEquals("Taco Normal con cebolla", desc);
+        String desc = cilantro.getDescription();
+        assertEquals("Taco Normal con cilantro", desc);
     }
 
     @Test
     public void testGetDescriptionWhenError(){
-        Taco cebolla = new Cebolla(taco);
+        Taco cilantro = new Cilantro(taco);
         when(taco.getDescription()).thenReturn("ERROR");
-        String desc = cebolla.getDescription();
+        String desc = cilantro.getDescription();
         assertEquals("ERROR", desc);
     }
 
     @Test
     public void testCostWhenError(){
-        Taco cebolla = new Cebolla(taco);
+        Taco cilantro = new Cilantro(taco);
         when(taco.getDescription()).thenReturn("ERROR");
-        double cost = cebolla.cost();
+        double cost = cilantro.cost();
         assertEquals(0.0, cost,0);
     }
-
 }
+

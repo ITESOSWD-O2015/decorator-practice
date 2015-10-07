@@ -1,4 +1,4 @@
-package com.iteso.decorator.condiments;
+package com.iteso.decorator.condiments.moreExpensive;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
@@ -19,11 +19,17 @@ public class TortillaHarina extends CondimentsDecorator{
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " en tortilla de harina";
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
+            return taco.getDescription() + " en tortilla de harina";
     }
 
     @Override
     public double cost() {
-        return 4 + taco.cost();
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return 4 + taco.cost();
     }
 }

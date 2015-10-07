@@ -11,6 +11,6 @@ public class Volcano extends Taco {
     }
     @Override
     public double cost() {
-        return 9.00;  //To change body of implemented methods use File | Settings | File Templates.
+        return 10.00;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

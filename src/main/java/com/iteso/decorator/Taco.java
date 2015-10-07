@@ -9,10 +9,11 @@ package com.iteso.decorator;
  */
 public abstract class Taco {
     public String description = "Any Taco";
+    public abstract double cost();
     public String getDescription(){
+        if(description.contains("ERROR"))
+            return "Error en el pedido";
         return description;
     }
-    public abstract double cost();
-
 
 }

@@ -1,4 +1,4 @@
-package com.iteso.decorator.meat;
+package com.iteso.decorator.meat.moreExpensive;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
@@ -19,11 +19,17 @@ public class Lengua extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de lengua";
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
+            return taco.getDescription() + " de lengua";
     }
 
     @Override
     public double cost() {
-        return 2 + taco.cost();
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return 2 + taco.cost();
     }
 }

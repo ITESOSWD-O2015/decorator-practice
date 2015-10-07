@@ -1,10 +1,9 @@
 package com.iteso.decorator.tacos;
 
 import com.iteso.decorator.Taco;
-import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,16 +12,16 @@ import static org.mockito.Mockito.*;
  * Time: 10:42 AM
  * To change this template use File | Settings | File Templates.
  */
-public class TacoNormalTest {
+public class VolcanoTest {
     @Test
     public void testDescription(){
-        Taco taco = new TacoNormal();
-        assertEquals("Taco normal", taco.description);
+        Taco taco = new Volcano();
+        assertEquals("Volcano", taco.description);
     }
 
     @Test
     public void testCost() {
-        Taco taco = new TacoNormal();
-        assertEquals(8.0, taco.cost(),0);
+        Taco taco = new Volcano();
+        assertEquals(10.0, taco.cost(),0);
     }
 }

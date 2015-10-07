@@ -1,4 +1,4 @@
-package com.iteso.decorator.size;
+package com.iteso.decorator.size.moreExpensive;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
@@ -15,11 +15,17 @@ public class Mega extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return (taco.description + " mega size");
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
+            return (taco.getDescription() + " de tamanio mega");
     }
 
     @Override
     public double cost() {
-        return (taco.cost() - 2);
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return (taco.cost() + 8);
     }
 }

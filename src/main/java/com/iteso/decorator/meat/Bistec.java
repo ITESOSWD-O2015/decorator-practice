@@ -19,11 +19,17 @@ public class Bistec extends CondimentsDecorator{
 
     @Override
     public String getDescription() {
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
         return taco.getDescription() + " de bistec";
     }
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return 0 + taco.cost();
     }
 }

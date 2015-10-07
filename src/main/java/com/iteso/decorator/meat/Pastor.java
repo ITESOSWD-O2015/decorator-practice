@@ -19,11 +19,17 @@ public class Pastor extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de pastor";
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
+            return taco.getDescription() + " de pastor";
     }
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return 0 + taco.cost();
     }
 }

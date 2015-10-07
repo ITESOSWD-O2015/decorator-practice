@@ -8,5 +8,7 @@ package com.iteso.decorator;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class CondimentsDecorator extends Taco {
+
     public abstract String getDescription();
+
 }

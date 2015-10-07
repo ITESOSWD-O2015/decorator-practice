@@ -1,4 +1,4 @@
-package com.iteso.decorator.condiments;
+package com.iteso.decorator.condiments.moreExpensive;
 
 import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
@@ -19,11 +19,17 @@ public class Queso extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " con queso";
+        if(taco.getDescription().contains("ERROR"))
+            return "ERROR";
+        else
+            return taco.getDescription() + " con queso";
     }
 
     @Override
     public double cost() {
-        return 2.00 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
+        if(taco.getDescription().contains("ERROR"))
+            return 0;
+        else
+            return 2.00 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

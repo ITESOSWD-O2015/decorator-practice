@@ -21,7 +21,7 @@ import com.iteso.decorator.tacos.Volcan;
  */
 public class TuTaco {
     public static void main(String[] args){
-        Taco taco = new TacoNormal("Regular");
+        Taco taco = new TacoNormal("regular");
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
 
@@ -35,7 +35,7 @@ public class TuTaco {
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
 
-        Taco taco2 = new TacoNormal("Regular");
+        Taco taco2 = new TacoNormal("regular");
 
         taco2 = new TortillaHarina(taco2);
         taco2 = new Lengua(taco2);
@@ -46,7 +46,7 @@ public class TuTaco {
         System.out.println(taco2.getDescription());
         System.out.println("$" + taco2.cost() + " MXN");
 
-        Taco taco3 = new Quesadilla("Regular");
+        Taco taco3 = new Quesadilla("regular");
 
         taco3 = new TortillaHarina(taco3);
         taco3 = new Pastor(taco3);
@@ -57,7 +57,7 @@ public class TuTaco {
         System.out.println(taco3.getDescription());
         System.out.println("$" + taco3.cost() + " MXN");
 
-        Taco taco4 = new Volcan("Regular");
+        Taco taco4 = new Volcan("regular");
         taco4 = new TortillaHarina(taco4);
         taco4 = new Pastor(taco4);
         taco4 = new Fish(taco4);
@@ -67,7 +67,7 @@ public class TuTaco {
         System.out.println(taco4.getDescription());
         System.out.println("$" + taco4.cost() + " MXN");
 
-        Taco taco5 = new TacoNormal("Regular");
+        Taco taco5 = new TacoNormal("mega");
 
         taco5 = new TortillaHarina(taco5);
         taco5 = new Fish(taco5);

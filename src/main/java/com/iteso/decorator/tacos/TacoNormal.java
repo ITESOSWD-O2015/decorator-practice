@@ -11,7 +11,7 @@ import com.iteso.decorator.Taco;
  */
 public class TacoNormal extends Taco {
     public TacoNormal(String size){
-        description = "Taco regular" + size;
+        description = "Taco regular " + size;
         this.size=size;
     }
     @Override

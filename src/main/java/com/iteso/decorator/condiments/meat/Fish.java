@@ -10,26 +10,30 @@ public class Fish extends CondimentsDecorator {
     Taco taco;
 
     public Fish(Taco taco){
-
-        if (taco.getSize()=="Mini"){//((taco.getDescription().contains("Mini"))) {
-            System.out.print("Error, no puede haber tacos mini de pescado y/o camaron");
-            return;
-        }
-
-        else
         this.taco = taco;
     }
 
     @Override
     public String getDescription(){
-        return this.taco.getDescription() + " de pescado";
+
+        if (taco.getDescription().contains("mini"))
+            return  "Error, no puede haber tacos mini de pescado";
+
+        else
+        return taco.getDescription() + " de pescado";
     }
     @Override
     public double cost(){
-        if(taco.getSize()=="Mini"){//(taco.description.contains("Mega")){
-            return 3.00 + taco.cost();
+        if (taco.getDescription().contains("mini")){
+            System.out.println("Error, no puede haber tacos mini de pescado");
+            return 0;
         }
 
+        else if (taco.getDescription().contains("mega"))
+                return 3.00 + taco.cost();
+
+
+        else
         return 2.0 + taco.cost();
 
     }

@@ -10,14 +10,15 @@ package com.iteso.decorator;
 public abstract class Taco {
     public String description = "Any Taco";
     protected String size = REGULAR;
-    public static String MEGA = "Mega";
-    public static String MINI = "Mini";
-    public static String REGULAR = "Regular";
+    public static String MEGA = "mega";
+    public static String MINI = "mini";
+    public static String REGULAR = "regular";
 
     public String getSize(){
         return size;
     }
     public String getDescription(){
+
         return description;
     }
     public abstract double cost();

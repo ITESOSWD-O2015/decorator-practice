@@ -23,7 +23,7 @@ public class TortillaHarina extends CondimentsDecorator{
     }
 
     @Override
-    public double cost() {
+    public double cost(){
         return 4 + taco.cost();
     }
 }

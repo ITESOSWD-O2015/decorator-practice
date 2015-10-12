@@ -23,7 +23,9 @@ public class Chorizo extends CondimentsDecorator {
     }
 
     @Override
-    public double cost() {
-        return 0 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
-    }
+    public double cost(){
+
+            return 5 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
+        }
+
 }

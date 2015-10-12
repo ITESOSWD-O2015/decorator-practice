@@ -30,8 +30,8 @@ public class CebollaTest {
     @Test
     public void testDescription(){
         Taco cebolla = new Cebolla(taco);
-        when(taco.getDescription()).thenReturn("Taco Normal");
+        when(taco.getDescription()).thenReturn("Taco");
         String desc = cebolla.getDescription();
-        assertEquals("Taco Normal con cebolla", desc);
+        assertEquals("Taco con cebolla", desc);
     }
 }

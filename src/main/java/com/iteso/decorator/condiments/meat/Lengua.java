@@ -23,7 +23,7 @@ public class Lengua extends CondimentsDecorator {
     }
 
     @Override
-    public double cost() {
-        return 2 + taco.cost();
+    public double cost() {//El costo de la lengua es de 2 en taco normal
+          return 7 + taco.cost();
     }
 }

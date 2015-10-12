@@ -19,11 +19,11 @@ public class TortillaMaiz extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " en tortilla de maíz";
+        return taco.getDescription() + " en tortilla de maiz";
     }
 
     @Override
-    public double cost() {
+    public double cost(){
         return 0 + taco.cost();  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

@@ -10,8 +10,10 @@ import com.iteso.decorator.Taco;
  * To change this template use File | Settings | File Templates.
  */
 public class TacoNormal extends Taco {
-    public TacoNormal(){
-        description = "Taco normal";
+
+    public TacoNormal()
+    {
+        description = "Taco";
     }
     @Override
     public double cost() {

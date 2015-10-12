@@ -23,7 +23,8 @@ public class Bistec extends CondimentsDecorator{
     }
 
     @Override
-    public double cost() {
-        return 0 + taco.cost();
+    public double cost(){
+         return 5 + taco.cost();
+
     }
 }

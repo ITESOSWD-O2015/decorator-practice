@@ -1,0 +1,17 @@
+package com.iteso.decorator.tacos;
+
+import com.iteso.decorator.Taco;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+/**
+ * Created by ShaSkills on 11/10/2015.
+ */
+public class QuesadillaTest {
+    @Test
+    public void testCost() {
+        Taco taco = new Quesadilla();
+        assertEquals(10.0, taco.cost(),0);
+    }
+}

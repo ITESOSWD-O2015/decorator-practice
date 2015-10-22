@@ -23,7 +23,8 @@ public class CebollaTest {
     @Test
     public void testCost(){
         Taco cebolla = new Cebolla(taco);
-        when(taco.cost()).thenReturn(8.0);
+        when(taco.cost()).thenReturn(8.0);//recibe el taco , cuando tu llames taco,cost debes retornar 8
+        //cuando llames a taco.cost assign 8
         double cost = cebolla.cost();
         assertEquals(8.0, cost,0);
     }

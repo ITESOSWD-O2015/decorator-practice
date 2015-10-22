@@ -1,27 +1,28 @@
 package com.iteso.decorator.size;
 
+import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
-import com.iteso.decorator.TacoSize;
 
 /**
  * Created by Feelpaa on 06/10/2015.
  */
-public class Regular extends TacoSize {
+public class Regular extends CondimentsDecorator {
+
 
     Taco taco;
 
-    public Regular(Taco taco){
+    public Regular (Taco taco){
         this.taco = taco;
     }
 
 
     @Override
-    public String getSize() {
-        return null;
+    public double cost() {
+        return taco.cost() ;
     }
 
     @Override
-    public double cost() {
-        return 0;
+    public String getDescription() {
+        return taco.getDescription() + "Regular";
     }
 }

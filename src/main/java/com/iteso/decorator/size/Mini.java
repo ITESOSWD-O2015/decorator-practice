@@ -1,12 +1,12 @@
 package com.iteso.decorator.size;
 
+import com.iteso.decorator.CondimentsDecorator;
 import com.iteso.decorator.Taco;
-import com.iteso.decorator.TacoSize;
 
 /**
  * Created by Feelpaa on 06/10/2015.
  */
-public class Mini extends TacoSize{
+public class Mini extends CondimentsDecorator{
     Taco taco;
 
     public Mini (Taco taco){
@@ -16,12 +16,12 @@ public class Mini extends TacoSize{
 
 
     @Override
-    public String getSize() {
-        return null;
+    public String getDescription() {
+        return taco.getDescription()+"Mini" ;
     }
 
     @Override
     public double cost() {
-        return 0;
+        return taco.cost()-1;
     }
 }

@@ -22,11 +22,17 @@ public class Shrip extends CondimentsDecorator {
 
     @Override
     public String getDescription() {
+        if(taco.getDescription().contains("mini"))
+            return "Desfilando Joven no vendemos mini de camaron";
+        else
         return taco.getDescription() + " de camaron !!! ";
     }
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        if(taco.getDescription().contains("mini"))
+            return 0;
+        else
+        return 10 + taco.cost();
     }
 }
